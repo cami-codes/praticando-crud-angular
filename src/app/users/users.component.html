@@ -1,0 +1,20 @@
+<p>users works!</p>
+<a routerLink="/tela1">Voltar</a>
+
+
+<h1>Usuários</h1>
+
+<table *ngIf="responseUsers">
+  <thead>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Sobrenome</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of responseUsers.data">
+      <td>{{user.id}}</td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+    </tr>
+  </tbody>
+</table>
