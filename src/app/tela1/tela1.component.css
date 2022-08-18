@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: darkgrey;
+}
+
+ul li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px 16px;
+}
+
+li a{
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+li a:hover {
+  color: red
+}
