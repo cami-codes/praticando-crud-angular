@@ -1,23 +1,23 @@
- export interface User {
-      id: number;
-      email: string;
-      first_name: string;
-      last_name: string;
-      avatar: string;
-  }
+export interface User {
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+}
 
-  export interface ResponseUsers {
-      page: number;
-      per_page: number;
-      total: number;
-      total_pages: number;
-      data: User[];
-  }
+export interface ResponseUsers {
+  page: number;
+  per_page: number;
+  total: number;
+  total_pages: number;
+  data: User[];
+}
 
-  // modelos para POST
-  export interface RequestCreate {
-    name: string;
-    job: string;
+// modelos para POST
+export interface RequestCreate {
+  name: string;
+  job: string;
 }
 
 export interface ResponseCreate {
@@ -26,3 +26,23 @@ export interface ResponseCreate {
   id: string;
   createdAt: Date;
 }
+
+
+// modelos pro get by id
+
+export interface ResponseUserId {
+  data: User
+}
+
+// modelos para PUT
+export interface RequestUpdate {
+  name: string;
+  job: string;
+}
+
+export interface ResponseUpdate {
+  name: string;
+  job: string;
+  updatedAt: Date;
+}
+

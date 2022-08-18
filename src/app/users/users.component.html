@@ -9,12 +9,14 @@
     <th>Id</th>
     <th>Nome</th>
     <th>Sobrenome</th>
+    <th>...</th>
   </thead>
   <tbody>
     <tr *ngFor="let user of responseUsers.data">
       <td>{{user.id}}</td>
       <td>{{user.first_name}}</td>
       <td>{{user.last_name}}</td>
+      <td><a routerLink="/users/update/{{user.id}}">EDITAR</a></td>
     </tr>
   </tbody>
 </table>

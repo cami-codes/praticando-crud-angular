@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RequestCreate, ResponseUsers } from 'src/app/model/user.model';
+import { RequestCreate, RequestUpdate, ResponseUpdate, ResponseUserId, ResponseUsers } from 'src/app/model/user.model';
 import { HttpClient } from '@angular/common/http';
 import { ResponseCreate } from '../../model/user.model';
 
@@ -21,4 +21,15 @@ export class UserService {
     return this.http.post<ResponseCreate>(this.url, request);
   }
 
+  getUserId(id: string): Observable<ResponseUserId> {
+    const _url = `${this.url}/${id}`;
+
+    return this.http.get<ResponseUserId>(_url);
+  }
+
+  updateUser(id: string, request: RequestUpdate): Observable<ResponseUpdate> {
+    const _url = `${this.url}/${id}`;
+
+    return this.http.post<ResponseUpdate>(_url, request);
+  }
 }
