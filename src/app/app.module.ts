@@ -10,6 +10,7 @@ import { Tela2Component } from './tela2/tela2.component';
 import { CreateUserComponent } from './users/create-user/create-user.component';
 import { UsersComponent } from './users/users.component';
 import { UpdateComponent } from './users/update/update.component';
+import { DeleteUserComponent } from './users/delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateComponent } from './users/update/update.component';
     Tela2Component,
     UsersComponent,
     CreateUserComponent,
-    UpdateComponent
+    UpdateComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
